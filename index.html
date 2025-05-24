@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Shop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
   </head>
   <body>
     <section id="navigation" class="navigation">
@@ -15,11 +16,10 @@
         <a href="#join-the-list">Join The List</a>
       </div>
       <div class="navigation__intro">
-       <h1 class="intro__title">The World of Sports Memorabilia Changes Today</h1>
-<p class="intro__text">
-  <span class="intro__brand">UNRIVALED</span> believes in a world where top-tier sports collection brings you closer to the game.
-</p>
-
+         <img src="img/Collectibles.jpg" alt="Collectibles" class="collectibles__image" />
+        <h1 class="intro__title">The World of Sports Memorabilia Changes Today</h1>
+        <p class="intro__text">
+          <span class="intro__brand">UNRIVALED</span> believes in a world where top-tier sports collection brings you closer to the game.
         </p>
       </div>
     </section>
@@ -49,7 +49,7 @@
 
       <div class="goods__item" id="trading-cards">
         <h3 class="number">03</h3>
-        <p class="description">Trading Cards
+        <p class="description">Trading Cards</p>
         <p class="text">
           From vintage rookies to modern limited editions, our professionally graded collection features sought-after cards spanning decades of sports history, with PSA and BGS authenticated rarities for collectors of all levels.
         </p>
@@ -67,108 +67,143 @@
     </section>
 
     <section class="collectibles">
-      <div class="collectibles__image">
-        <img src="img/Collectibles.jpg" alt="Collectibles" />
-        <p>First</p>
-        <p>Class</p>
-        <p>Collectibles</p>
-      </div>
       <div class="collectibles__text">
-       <h2 class="players-club__title">
-  <span class="players-club__the">The</span><br />
-  <span class="players-club__players">Players</span><br />
-  <span class="players-club__club">Club</span>
-</h2>
-<p class="players-club__subtitle">Can we have your autograph?</p>
+        <h2 class="players-club__title">
+          <span class="players-club__the">The</span>
+          <span class="players-club__players">Players</span>
+          <span class="players-club__club">Club</span>
+        </h2>
+        <p class="players-club__subtitle">
+          Can we have <span class="players-club__your">your</span> autograph?
+        </p>
       </div>
     </section>
 
     <section class="contact" id="join-the-list">
-      <div class="contact__form">
-        <p>Contact Details</p>
-        <input
-          type="text"
-          id="first-name"
-          placeholder="First Name*"
-          required
-        />
-        <input
-          type="text"
-          id="last-name"
-          placeholder="Last Name*"
-          required
-        />
+      <p class="details">Contact Details</p>
+      <form class="contact__form" id="contact-form">
+        <input type="text" id="first-name" placeholder="First Name*" required />
+        <input type="text" id="last-name" placeholder="Last Name*" required />
         <input type="email" id="email" placeholder="Email*" required />
         <button type="submit" id="submit">Join</button>
-        <p>Our Address</p>
+        <p class="address">Our Address</p>
         <p>159-161 Larchmont Ave<br />Larchmont New York 10538</p>
-      </div>
+      </form>
     </section>
+
+    <style>
+      body {
+        background: #fff;
+        color: #122023;
+        font-family: Anton, sans-serif;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+        padding: 20px;
+      }
+      .intro__title {
+        text-align: center;
+        font-size: 80px;
+      }
+      .intro__brand {
+        color: rgb(222, 81, 37);
+      }
+      .intro__text {
+        text-align: right;
+      }
+      .goods__title {
+        margin: 30px 50px;
+        font-size: 90px;
+      }
+      .goods__item {
+        display: flex;
+        gap: 2rem;
+        margin: 50px;
+      }
+      .goods__item img {
+  max-width: 300px;
+  margin-right: 40px;
+}
+.collectibles__image {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+      .description {
+        font-size: 50px;
+        margin-bottom: 10px;
+      }
+      .text {
+        font-size: 21px;
+        margin-bottom: 10px;
+      }
+      .number {
+        color: rgb(222, 81, 37);
+        margin: 30px 50px 10px 50px;
+        font-size: 26px;
+      }
+      .players-club__title {
+        text-align: center;
+      }
+      .players-club__the {
+        color: rgb(18, 32, 35);
+        font-size: 32px;
+      }
+      .players-club__players {
+        font-size: 16px;
+        color: rgb(18, 32, 35);
+      }
+      .players-club__club {
+        color: rgb(222, 81, 37);
+        font-size: 32px;
+      }
+      .players-club__subtitle {
+        color: rgb(18, 32, 35);
+        font-size: 80px;
+        text-align: center;
+      }
+      .players-club__your {
+        color: rgb(222, 81, 37);
+        font-size: 80px;
+        text-align: center;
+      }
+
+      .details {
+        font-size: 16px;
+        color: rgb(222, 81, 37);
+      }
+
+      .contact__form input[type="text"],
+      .contact__form input[type="email"], button {
+        display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  border-color: white;
+  min-width: 300px;
+      }
+
+      button {
+        background-color: rgb(222, 81, 37);
+      }
+      .address {
+        color:rgb(222, 81, 37);
+        font-size: 25px;
+      }
+    </style>
+
+    <script>
+      const form = document.getElementById("contact-form");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("Your form has been submitted!");
+        form.reset();
+      });
+    </script>
   </body>
-  <style>
-body {
-  background: #fff;
-  color: #122023;
-  font-family: Anton, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-  padding: 20px;
-}
-
-.intro__title {
-  text-align: center;
-  font-size: 80px;
-}
-
-.intro__brand {
-  color: rgb(78, 12, 12);
-}
-
-.intro__text {
-  text-align: right;
-}
-
-.goods__title {
-  margin: 30px 50px;
-  font-size: 90px;
-}
-.goods__item {
-  display: flex;
-  gap: 2rem;
-  margin: 50px;
-}
-
-img {
-    max-width: 300px;
-    margin-right: 40px;
-}
-
-.description {
-font-size: 50px;
-margin-bottom: 10px;
-}
-
-.text {
-  font-size: 21px;
-  margin-bottom: 10px;
-}
-
-.number {
-color: rgb(83, 7, 7);
-margin: 30px 50px;
-font-size: 26px;
-margin-bottom: 10px;
-}
-
-
-  </style>
-  <script>
-    const submit = document.getElementById("submit");
-submit.addEventListener("click", function () {
-  alert("Your form has been submitted!");
-});
-  </script>
 </html>
