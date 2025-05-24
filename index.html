@@ -1,78 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-<title>Shop</title>
-</head>
-<body>
-     <section>
-    <div class="card-links">
-<a href="#Jerseys">Jerseys</a>
-<a href="#Trading Cards">Trading Cards</a>
-<a href="#Autographs">Autographs</a>
-<a href="#Memorabilia">Memorabilia</a>
-<a href="#Join The List">Join The List</a>
-    </div>
-    <div>
-        <h1>The WORLD OF
-SPORTS MEMORABILIA
-CHANGES TODAY</h1>
-<p>
-    UNRIVALED believes in a world
-where top-tier sports collection
-brings you closer to the game.
+    <meta charset="UTF-8" />
+    <title>Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <section id="navigation" class="navigation">
+      <div class="navigation__links">
+        <a href="#jerseys">Jerseys</a>
+        <a href="#trading-cards">Trading Cards</a>
+        <a href="#autographs">Autographs</a>
+        <a href="#memorabilia">Memorabilia</a>
+        <a href="#join-the-list">Join The List</a>
+      </div>
+      <div class="navigation__intro">
+       <h1 class="intro__title">The World of Sports Memorabilia Changes Today</h1>
+<p class="intro__text">
+  <span class="intro__brand">UNRIVALED</span> believes in a world where top-tier sports collection brings you closer to the game.
 </p>
-    </div>
-</section>
-<section>
-    <div>
-        <h1>THE GOODS</h1>
-    </div>
-    <div>
-        <h2>01</h2>
-        <p id="Autographs">Autographs</p>
-        <p>Our exclusive collection features authenticated, signed memorabilia from legendary athletes across all major sports, each piece carefully selected for its historical significance and investment potential.</p>
-    <img src="img/Autographs.jpg" alt="Autographs">
-    </div>
-    <div>
-        <h2>02</h2>
-        <p id="Jerseys">Jerseys</p>
-        <p>Game-worn and authentic replica jerseys from iconic players across all major sports, featuring rare vintage editions and championship-season collectibles that showcase the evolution of team designs.</p>
-   <img src="img/Jerseys.jpg" alt="Jerseys">
-    </div>
-    <div>
-        <h2>03</h2>
-        <p id="Trading Cards">Trading cards</p>
-        <p>From vintage rookies to modern limited editions, our professionally graded collection features sought-after cards spanning decades of sports history, with PSA and BGS authenticated rarities for collectors of all levels.</p>
-   <img src="img/Cards.jpg" alt="Cards">
-    </div>
-    <div>
-        <h2>04</h2>
-        <p id="Memorabilia">Memorabilia</p>
-        <p>Our diverse collection spans championship flags, game-used equipment, and limited-edition commemorative items from historic sporting moments, each piece authenticated with certificates of authenticity and display-ready presentation.</p>
-    <img src="img/Memorabilia.jpg" alt="Memorabilia">
-    </div>
-</section>
-<section>
-    <div>
-        <img src="img/Collectibles.jpg" alt="Collectibles">
-        <p>Fisrt</p>
+
+        </p>
+      </div>
+    </section>
+
+    <section class="goods">
+      <div class="goods__title">
+        <h2>THE GOODS</h2>
+      </div>
+
+      <div class="goods__item" id="autographs">
+        <h3 class="number">01</h3>
+        <p class="description">Autographs</p>
+        <p class="text">
+          Our exclusive collection features authenticated, signed memorabilia from legendary athletes across all major sports, each piece carefully selected for its historical significance and investment potential.
+        </p>
+        <img src="img/Autographs.jpg" alt="Autographs" />
+      </div>
+
+      <div class="goods__item" id="jerseys">
+        <h3 class="number">02</h3>
+        <p class="description">Jerseys</p>
+        <p class="text">
+          Game-worn and authentic replica jerseys from iconic players across all major sports, featuring rare vintage editions and championship-season collectibles that showcase the evolution of team designs.
+        </p>
+        <img src="img/Jerseys.jpg" alt="Jerseys" />
+      </div>
+
+      <div class="goods__item" id="trading-cards">
+        <h3 class="number">03</h3>
+        <p class="description">Trading Cards
+        <p class="text">
+          From vintage rookies to modern limited editions, our professionally graded collection features sought-after cards spanning decades of sports history, with PSA and BGS authenticated rarities for collectors of all levels.
+        </p>
+        <img src="img/Cards.jpg" alt="Trading Cards" />
+      </div>
+
+      <div class="goods__item" id="memorabilia">
+        <h3 class="number">04</h3>
+        <p class="description">Memorabilia</p>
+        <p class="text">
+          Our diverse collection spans championship flags, game-used equipment, and limited-edition commemorative items from historic sporting moments, each piece authenticated with certificates of authenticity and display-ready presentation.
+        </p>
+        <img src="img/Memorabilia.jpg" alt="Memorabilia" />
+      </div>
+    </section>
+
+    <section class="collectibles">
+      <div class="collectibles__image">
+        <img src="img/Collectibles.jpg" alt="Collectibles" />
+        <p>First</p>
         <p>Class</p>
         <p>Collectibles</p>
-    </div>
-    <div>
-        <h1>The</h1>
-        <h1>Players</h1>
-        <h1>Club</h1>
-        <p>CAN WE HAVE
-YOUR AUTOGRAPH?</p>
-    </div>
-</section>
-<section>
-    
-</section>
-</body>
-<style>
+      </div>
+      <div class="collectibles__text">
+       <h2 class="players-club__title">
+  <span class="players-club__the">The</span><br />
+  <span class="players-club__players">Players</span><br />
+  <span class="players-club__club">Club</span>
+</h2>
+<p class="players-club__subtitle">Can we have your autograph?</p>
+      </div>
+    </section>
 
-</style>
+    <section class="contact" id="join-the-list">
+      <div class="contact__form">
+        <p>Contact Details</p>
+        <input
+          type="text"
+          id="first-name"
+          placeholder="First Name*"
+          required
+        />
+        <input
+          type="text"
+          id="last-name"
+          placeholder="Last Name*"
+          required
+        />
+        <input type="email" id="email" placeholder="Email*" required />
+        <button type="submit" id="submit">Join</button>
+        <p>Our Address</p>
+        <p>159-161 Larchmont Ave<br />Larchmont New York 10538</p>
+      </div>
+    </section>
+  </body>
+  <style>
+body {
+  background: #fff;
+  color: #122023;
+  font-family: Anton, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.intro__title {
+  text-align: center;
+  font-size: 80px;
+}
+
+.intro__brand {
+  color: rgb(78, 12, 12);
+}
+
+.intro__text {
+  text-align: right;
+}
+
+.goods__title {
+  margin: 30px 50px;
+  font-size: 90px;
+}
+.goods__item {
+  display: flex;
+  gap: 2rem;
+  margin: 50px;
+}
+
+img {
+    max-width: 300px;
+    margin-right: 40px;
+}
+
+.description {
+font-size: 50px;
+margin-bottom: 10px;
+}
+
+.text {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.number {
+color: rgb(83, 7, 7);
+margin: 30px 50px;
+font-size: 26px;
+margin-bottom: 10px;
+}
+
+
+  </style>
+  <script>
+    const submit = document.getElementById("submit");
+submit.addEventListener("click", function () {
+  alert("Your form has been submitted!");
+});
+  </script>
 </html>
